@@ -1,0 +1,125 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--accent-clr: #10c8e0;
+	--accent-clr-thin: #d4f1f5;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5em;
+	letter-spacing: 0.03em;
+	background: #fff;
+	color: #222529;
+	padding: 10px;
+}
+
+.wrapper {
+	width: 100%;
+	max-width: 900px;
+	margin-inline: auto;
+	padding-inline: 10px;
+}
+
+.header {
+	margin-bottom: 1rem;
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+
+.select-group {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+}
+
+.select-group label {
+	font-weight: 500;
+	color: #333639;
+}
+
+textarea {
+	width: 100%;
+	min-height: 200px;
+	height: max-content;
+	border: 1px solid #bbb;
+	border-radius: 10px;
+	padding: 10px;
+	font: inherit;
+	letter-spacing: inherit;
+	color: inherit;
+	line-height: inherit;
+	resize: vertical;
+	transition: all 300ms ease-in-out;
+	outline: none;
+}
+
+textarea:focus {
+	border-color: var(--accent-clr);
+	box-shadow: 0 0 0 3px var(--accent-clr-thin);
+}
+
+/* Select styles */
+
+select {
+	-webkit-appearance: none;
+	padding: 7px 40px 7px 12px;
+	border: 1px solid #e8eaed;
+	border-radius: 5px;
+	background: #fff;
+	box-shadow: 0 1px 3px -2px #9098a9;
+	cursor: pointer;
+	font-family: inherit;
+	font-size: 16px;
+	transition: all 150ms ease;
+}
+select:required:invalid {
+	color: #5a667f;
+}
+select option {
+	appearance: none;
+	color: #223254;
+	padding: 4px;
+}
+select option[value=""][disabled] {
+	display: none;
+}
+select:focus {
+	outline: none;
+	border-color: #07f;
+	box-shadow: 0 0 0 2px rgba(0, 119, 255, 0.2);
+}
+
+.code-box pre {
+	tab-size: inherit !important;
+	border-radius: inherit;
+}
+
+button {
+	padding: 8px 20px;
+	border-radius: 4px;
+	background-color: var(--accent-clr);
+	color: #fff;
+	font: inherit;
+	border: none;
+	outline: none;
+	display: inline;
+	width: 100%;
+	text-align: center;
+	transition: 300ms ease-in-out;
+	cursor: pointer;
+	user-select: none;
+}
+
+button:hover,
+button:focus {
+	box-shadow: 0 0 0 3px var(--accent-clr-thin);
+	opacity: 0.9;
+}
